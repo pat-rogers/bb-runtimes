@@ -26,6 +26,10 @@ class Linux(DFBBTarget):
     def is_legacy_format(self):
         return True
 
+    @property
+    def has_command_line_arguments(self):
+        return True
+
 
 class X86Linux(Linux):
     @property
