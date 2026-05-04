@@ -38,7 +38,7 @@ class X86Windows(Windows):
 
     @property
     def system_ads(self):
-        return {"light": "system-native-x86-light.ads"}
+        return {"light": "system-windows-x86-light.ads"}
 
 
 class X8664Windows(Windows):
@@ -52,4 +52,4 @@ class X8664Windows(Windows):
 
     @property
     def system_ads(self):
-        return {"light": "system-native-x86-light.ads"}
+        return {"light": "system-windows-x86-light.ads"}

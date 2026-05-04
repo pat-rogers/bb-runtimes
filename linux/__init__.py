@@ -35,8 +35,8 @@ class X86Linux(Linux):
     @property
     def system_ads(self):
         return {
-            "light": "system-native-x86-light.ads",
-            "light-tasking": "system-native-x86-light-tasking.ads",
+            "light": "system-linux-x86-light.ads",
+            "light-tasking": "system-linux-x86-light-tasking.ads",
         }
 
 
@@ -52,8 +52,8 @@ class X8664Linux(Linux):
     @property
     def system_ads(self):
         return {
-            "light": "system-native-x86-light.ads",
-            "light-tasking": "system-native-x86-light-tasking.ads",
+            "light": "system-linux-x86-light.ads",
+            "light-tasking": "system-linux-x86-light-tasking.ads",
         }
 
 
