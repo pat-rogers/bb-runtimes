@@ -276,6 +276,7 @@ sources = {
             "hie/g-io-put.adb",
         ],
         "linux_srcs": [
+            "exit.c",
             "hie/a-textio.ads",
             "hie/a-textio__libc.adb",
             "hie/g-io__zfp.ads",

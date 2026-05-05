@@ -26,6 +26,10 @@ class Linux(DFBBTarget):
     def is_legacy_format(self):
         return True
 
+    @property
+    def has_command_line_arguments(self):
+        return True
+
 
 class X86Linux(Linux):
     @property
@@ -35,8 +39,8 @@ class X86Linux(Linux):
     @property
     def system_ads(self):
         return {
-            "light": "system-native-x86-light.ads",
-            "light-tasking": "system-native-x86-light-tasking.ads",
+            "light": "system-linux-x86-light.ads",
+            "light-tasking": "system-linux-x86-light-tasking.ads",
         }
 
 
@@ -52,8 +56,8 @@ class X8664Linux(Linux):
     @property
     def system_ads(self):
         return {
-            "light": "system-native-x86-light.ads",
-            "light-tasking": "system-native-x86-light-tasking.ads",
+            "light": "system-linux-x86-light.ads",
+            "light-tasking": "system-linux-x86-light-tasking.ads",
         }
 
 

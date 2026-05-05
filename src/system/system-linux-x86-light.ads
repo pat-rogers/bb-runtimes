@@ -5,7 +5,7 @@
 --                               S Y S T E M                                --
 --                                                                          --
 --                                 S p e c                                  --
---                              (ARM Version)                               --
+--                              (x86 Version)                               --
 --                                                                          --
 --          Copyright (C) 1992-2026, Free Software Foundation, Inc.         --
 --                                                                          --
@@ -113,8 +113,7 @@ package System is
    --  Other System-Dependent Declarations
 
    type Bit_Order is (High_Order_First, Low_Order_First);
-   Default_Bit_Order : constant Bit_Order :=
-                         Bit_Order'Val (Standard'Default_Bit_Order);
+   Default_Bit_Order : constant Bit_Order := Low_Order_First;
    pragma Warnings (Off, Default_Bit_Order); -- kill constant condition warning
 
    --  Priority-related Declarations (RM D.1)
@@ -148,7 +147,7 @@ private
    Atomic_Sync_Default       : constant Boolean := False;
    Backend_Divide_Checks     : constant Boolean := False;
    Backend_Overflow_Checks   : constant Boolean := True;
-   Command_Line_Args         : constant Boolean := False;
+   Command_Line_Args         : constant Boolean := True;
    Configurable_Run_Time     : constant Boolean := True;
    Denorm                    : constant Boolean := True;
    Duration_32_Bits          : constant Boolean := False;
