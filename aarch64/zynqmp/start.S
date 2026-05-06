@@ -366,7 +366,18 @@ __start_slave_cpu:
         /* Call the rts entry point for the CPU (with CPU_Id as argument). */
         add     x0,x19,#1
         bl      __gnat_initialize_slave
-1:      b       1b
+        /* Put the slave CPU(s) into a wait for event low power state.
+           In a tasking_runtime __gnat_initialize_slave does not return and
+           in a non-tasking runtime it is a no-op. In either case if we
+           reach this point the core needs to do something. We put it
+           in an infinite loop with a wfe intruction. The wfe instruction
+           puts it into a low power state and the loop ensures it stays
+           there in case it wakes up for any reason.
+           See ARM DDI 0487E.a Arm Architecture Reference Manual Armv8,
+           for Armv8-A architecture profile.
+        */
+1:      wfe
+        b       1b
         .size __start_slave_cpu, . - __start_slave_cpu
 
 
