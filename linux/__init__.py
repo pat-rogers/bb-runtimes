@@ -73,6 +73,6 @@ class Aarch64Linux(Linux):
     @property
     def system_ads(self):
         return {
-            "light": "system-native-arm-light.ads",
-            "light-tasking": "system-native-arm-light-tasking.ads",
+            "light": "system-linux-arm-light.ads",
+            "light-tasking": "system-linux-arm-light-tasking.ads",
         }
